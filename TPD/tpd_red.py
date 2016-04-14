@@ -58,9 +58,9 @@ t_out=np.zeros(len(file_temp))+41.
 
 for i in np.arange(len(file_temp)):
 #for i in [1]:
-	file_out=file_mass[i]+'_'+str(n_col[i])+'.dat'
+	file_out='TPD_results/'+file_mass[i]+'_'+str(n_col[i])+'.dat'
 	print file_out
-	time_i,m_i=np.genfromtxt(file_mass[i],delimiter=',',unpack=True,skip_header=42,usecols=[1,n_col[i]])
+	time_i,m_i=np.genfromtxt('Raw_data/'+file_mass[i],delimiter=',',unpack=True,skip_header=42,usecols=[1,n_col[i]])
 
 	with open(file_mass[i], 'r') as infile:
 	    data = infile.read()
